@@ -1,5 +1,5 @@
-# database
-2021 Database
+# Query apps around universities in New York State
+Fall 2021 Database Applications and Systems
 
 Here are some instructions for our application. This is a database query application that allows users to search for information around all colleges in New York State. The information includes outdoor sports, diet, crime and other useful information for college students. The app also allows users to learn more about universities, including their majors.
 
