@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/layui.css')}}" />
+
+    <title>view data</title>
+</head>
+<body>
+<center style="padding-top: 40px">
+		<a style="font-size: 70px;font-weight: 500">University Surrounding Information </a>
+		</br>
+		<div style="width: 80%;padding-top: 20px">
+			<blockquote class="layui-elem-quote"></blockquote>
+
+			<div id="table"></div>
+			<div id="pageBar"></div>
+		</div>
+
+	</center>
+
+
+<table border="1" cellspacing="0" width="800" align="center">
+
+    <tr style="text-align:center ">
+        <td><font size="10">crimes</font></td><td><font size="10">food</td></font><td><font size="10">outdoor</font></td>
+
+    </tr>
+        <tr style="text-align:center ">
+        <td><font size="10">{{crimes}}</font></td><td><font size="10">{{food}}</font></td><td><font size="10">{{outdoor}}</font></td>
+    </tr>
+</table>
+
+</body>
+</html>

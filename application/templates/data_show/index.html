@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/layui.css')}}" />
+
+</head>
+
+<BODY>
+	<center style="padding-top: 40px">
+		<a style="font-size: 70px;font-weight: 500">State University of New York </a>
+		</br>
+		<div style="width: 80%;padding-top: 20px">
+			<blockquote class="layui-elem-quote"></blockquote>
+
+			<div id="table"></div>
+			<div id="pageBar"></div>
+		</div>
+
+	</center>
+
+
+
+
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='/js/layui.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='/js/nicePage.js')}}"></script>
+<script type="text/javascript">
+
+	js_object = eval('{{rows|safe}}')
+	var json =js_object;
+
+
+	var nameList = ['campusname', 'county', 'institution type', 'city', 'state','Campus Website'] //table的列名
+	var widthList = [100, 100, 100, 100, 100, 200] //table每列的宽度
+
+
+	$(function () {
+		nicePage.setCfg({
+			table: 'table',
+			bar: 'pageBar',
+			limit: 20,
+			color: '#1E9FFF',
+			layout: ['count', 'prev', 'page', 'next', 'limit', 'skip']
+		});
+	});//初始化完成
+</script>
+
+</html>
